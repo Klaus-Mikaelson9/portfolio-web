@@ -1,0 +1,42 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/footer/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    &__link-social {
+        margin-top: 45px;
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+
+    }
+    &__p {
+        margin-top: 50px;
+        display: flex;
+        text-align: center;
+    }
+    &__src {
+        margin-top: 50px;
+        font-family: LouisGeorgeCafe;
+        font-size: 14.4px;
+        line-height: 28px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    &__link-icon {
+        margin-top: 20px;
+        padding-bottom: 40px;
+        font-family: LouisGeorgeCafe;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 400;
+        color: #ffffff;
+    }
+}

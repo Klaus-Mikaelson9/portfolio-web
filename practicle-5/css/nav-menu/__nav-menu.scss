@@ -1,0 +1,122 @@
+.nav-menu {
+  &__wrapper {
+    max-width: 490px;
+    height: 48px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &__li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__links {
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    max-height: 48px;
+    padding: 0 12px;
+    border: 1px solid transparent;
+
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__links:hover {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__input {
+    display: none;
+  }
+  &__input-search_active {
+    display: flex;
+    width: 250px;
+    height: 48px;
+    position: absolute;
+    left: -262px;
+
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    padding-left: 12px;
+
+    -webkit-box-shadow: -10px 5px 4px 0px rgba(34, 60, 80, 0.79);
+    -moz-box-shadow: -10px 5px 4px 0px rgba(34, 60, 80, 0.79);
+    box-shadow: -10px 5px 4px 0px rgba(34, 60, 80, 0.79);
+    
+    
+
+  }
+  &__search-btn {
+    display: block;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .nav-menu {
+    &__wrapper {
+      display: block;
+      position: relative;
+      z-index: 300;
+    }
+    &__list {
+      width: 280px;
+      flex-direction: column;
+      position: fixed;
+      right: 0;
+      bottom: 6%;
+      background-color: #2d3f51;
+      z-index: 3;
+      -moz-transform: scale(0.9) translate(420px, 0px) skew(-20deg, 0deg);
+      -webkit-transform: scale(0.9) translate(420px, 0px) skew(-20deg, 0deg);
+      -o-transform: scale(0.9) translate(420px, 0px) skew(-20deg, 0deg);
+      -ms-transform: scale(0.9) translate(420px, 0px) skew(-20deg, 0deg);
+      transform: scale(0.9) translate(420px, 0px) skew(-20deg, 0deg);
+      transition: .2s;
+    }
+    
+    &__list-active{
+      display: flex;
+      -moz-transform:none;
+      -webkit-transform:none;
+      -o-transform:none;
+      -ms-transform:none;
+      transform:none;
+      transition: .4s;
+    }
+    &__links {
+      display: flex;
+      border: 1px solid #ffffff;
+      padding: 6vh;
+      width: 278px;
+    }
+    &__links:active {
+      background-color: #c8342d;
+      
+    }
+    &__input-search_active {
+      left: -116px;
+      bottom: -70px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.button-link {
+    display: flex;
+    &__links {
+        padding: 14px 20px;
+        border: 1px solid #000000;
+        text-decoration: none;
+        font-family: LouisGeorgeCafe;
+        font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1366)); //16.1px;
+        line-height: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1366));
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        color: #000000;
+        text-transform: uppercase;
+    }
+    &__links:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 5px rgba(115, 115, 115, .3);
+        transition: .2s;
+    }
+    &__links:active {
+        color: white;
+        background-color: #4ac74e;
+        animation: bounce .2s;
+    }
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.button_inner {
+    margin-top: 30px;
+    padding-bottom: 40px;
+}

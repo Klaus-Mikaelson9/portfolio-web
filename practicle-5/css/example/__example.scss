@@ -1,0 +1,84 @@
+.example {
+  background-color: #2d3f51;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 85%;
+    max-width: 1050px;
+  }
+  &__item {
+    display: flex;
+    min-width: 130px;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__octagon {
+    display: flex;
+    width: max-content;
+    height: max-content;
+    position: relative;
+    z-index: 0;
+  }
+  &__octagon-svg {
+    transition: fill .3s;
+    width: 96px;
+    height: 96px;
+    fill: #ffffff;
+  }
+  &__number {
+    transition: color .3s;
+    color: #ffffff;
+    position: absolute;
+    left: 43%;
+    top: 34%;
+
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__item-title {
+    transition: color .3s;
+    padding-top: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__item:hover &__octagon-svg {
+    fill: #c8342d;
+    transition: .2s;
+  }
+  &__item:hover  &__number {
+    color: #c8342d;
+    transition: .2s;
+  }
+  &__item:hover &__item-title {
+    color: #c8342d;
+    transition: .2s;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .example {
+    &__text {
+      padding: 30px 0;
+    }
+    &__items {
+      justify-content: space-evenly;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+body {
+  font-family: OpenSans;
+}
+section {
+  width: 100%;
+}
+
+@import "__reset.scss";
+@import "burger/_burger";
+@import "link-btn/_link-btn";
+@import "text/_text";
+@import "fonts/_fonts";
+@import "main/__main.scss";
+@import "header/__header.scss";
+@import "nav-menu/__nav-menu.scss";
+@import "logo/_logo";
+@import "social/_social";
+@import "slider/_slider";
+@import "skills/_skills";
+@import "showcase/_showcase";
+@import "example/_example";
+@import "service/_service";
+@import "recall/_recall";
+@import "blog/_blog";
+@import "footer/_foter";

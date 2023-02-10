@@ -1,0 +1,15 @@
+.logo {
+  position: absolute;
+  left: 46.5%;
+  &__link {
+    height: 48px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .logo {
+    display: none;
+  }
+}

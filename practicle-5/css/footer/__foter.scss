@@ -1,0 +1,37 @@
+.footer {
+  &__wrapper {
+    padding: 80px 0;
+    background-color: #28252a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__copyright {
+    padding-top: 20px;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #fff;
+  }
+  &__copyright:hover {
+    color: #c8342d;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    &__wrapper {
+      padding: 30px;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .footer {
+    &__wrapper {
+      padding: 20px;
+    }
+    &__copyright {
+      padding: 0;
+    }
+  }
+}

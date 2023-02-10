@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopka</title>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <h1 class="visually-hidden">Sundries shop</h1>
+  <header class="appbar">
+  <a href="./index.html" class="appbar__logo"></a>
+  <a href="./pageNotFound.html" class="appbar__link">Sell on Shopka</a>
+  <a href="./pageNotFound.html" class="appbar__link">Register</a>
+  <form class="appbar__search">
+    <input type="search" class="appbar__input" placeholder="Search">
+    <input type="submit" class="appbar__btn-search" value="">
+  </form>
+  <a href="./pageNotFound.html" class="appbar__link">Consumer Electronics</a>
+  <div class="appbar__account account">
+    <div class="account__btn" id="sing-in">Sign in</div>
+    <div class="account__btn" id="cart">My cart
+      <span id="count-product">1+</span>
+    </div>
+    <div class="account__menu" id="login"></div>
+  </div>
+  <div class="appbar_modals modals">
+    <div class="modals__login hidde">
+      <form class="modals__login-form">
+        <span class="modals__login-text">Login:</span>
+        <input type="email" class="modals__login-input" aria-label="Login">
+        <span class="modals__login-text">Password:</span>
+        <input type="password" class="modals__login-input" aria-label="Password">
+        <button type="submit" class="modals__login-btn">Enter</button>
+        <button class="modals__login-btn">Restore password</button>
+        <button class="modals__login-btn modals__login-close-btn">X</button>
+      </form>
+    </div>
+    <div class="modals__cart hidde">
+      <div class="modals__wrap-cart"></div>
+    </div>
+    <div class="modals__login-menu hidde">
+      <ul class="modals__login-menu-list">
+        <li class="modals__login-menu-item">John Doe</li>
+        <li class="modals__login-menu-item">My watch</li>
+        <li class="modals__login-menu-item">Register</li>
+        <li class="modals__login-menu-item">Sell on Shopka</li>
+        <li class="modals__login-menu-item">Consumer Electronics</li>
+        <li class="modals__login-menu-item">Settings</li>
+      </ul>
+    </div>
+  </div>
+</header>
+  <nav class="top-nav" data-mobile="false">
+  <ul class="top-nav__list">
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#hanger"/>
+      </svg>
+      <a href="#" class="top-nav__link">Clothing & Shoes</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#cinema"/>
+      </svg>
+      <a href="#" class="top-nav__link">Entertainment</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#concert"/>
+      </svg>
+      <a href="#" class="top-nav__link">Music</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#fitness"/>
+      </svg>
+      <a href="#" class="top-nav__link">Sport & Lifestyle</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#pets"/>
+      </svg>
+      <a href="#" class="top-nav__link">Pets</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#restaraunt"/>
+      </svg>
+      <a href="#" class="top-nav__link">Kitchen Accessories</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#observation"/>
+      </svg>
+      <a href="#" class="top-nav__link">Travel Equipment</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#barley"/>
+      </svg>
+      <a href="#" class="top-nav__link">Growing & Garden</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#powerstation"/>
+      </svg>
+      <a href="#" class="top-nav__link">Electrical Tools</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#babysitter"/>
+      </svg>
+      <a href="#" class="top-nav__link">Mother Care</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#nuclearStation"/>
+      </svg>
+      <a href="#" class="top-nav__link">Toys & Entertainment</a>
+    </li>
+    <li class="top-nav__item">
+      <svg class="top-nav__item-illustration">
+        <use xlink:href="images/sprite.svg#shipWheel"/>
+      </svg>
+      <a href="#" class="top-nav__link">Vintage</a>
+    </li>
+  </ul>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</nav>
+  <main class="page">
+    <aside class="departments">
+  <button class="departments__btn">Departments</button>
+  <section class="departments__wrap-list">
+    <h2 class="departments__title-large">All categories:</h2>
+    <ul class="departments__list">
+      <li class="departments__category">
+        <section class="departments__category-wrap">
+          <svg class="departments__list-chevron">
+            <use href="images/sprite.svg#chevronDown"></use>
+          </svg>
+          <h3 class="departments__title-middle">Electronics</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Cell Phones</li>
+            <li class="departments__item-category hidde">Smartphones</li>
+            <li class="departments__item-category hidde">Computers</li>
+            <li class="departments__item-category hidde">Accessories</li>
+            <li class="departments__item-category hidde">Cameras</li>
+            <li class="departments__item-category hidde">TV</li>
+            <li class="departments__item-category hidde">Appliances</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
+          <svg class="departments__list-chevron">
+            <use href="images/sprite.svg#chevronDown"></use>
+          </svg>
+          <h3 class="departments__title-middle">Business & Industrial</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Hand tool</li>
+            <li class="departments__item-category hidde">Generators</li>
+            <li class="departments__item-category hidde">Garden equipment</li>
+            <li class="departments__item-category hidde">Welders</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
+          <svg class="departments__list-chevron">
+            <use href="images/sprite.svg#chevronDown"></use>
+          </svg>
+          <h3 class="departments__title-middle">Home & Garden</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Plumbing</li>
+            <li class="departments__item-category hidde">Furniture</li>
+            <li class="departments__item-category hidde">Tableware</li>
+            <li class="departments__item-category hidde">Electrician</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
+          <svg class="departments__list-chevron">
+            <use href="images/sprite.svg#chevronDown"></use>
+          </svg>
+          <h3 class="departments__title-middle">Children's products</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Strollers</li>
+            <li class="departments__item-category hidde">Cribs</li>
+            <li class="departments__item-category hidde">Diapers</li>
+            <li class="departments__item-category hidde">Toys</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
+          <svg class="departments__list-chevron">
+            <use href="images/sprite.svg#chevronDown"></use>
+          </svg>
+          <h3 class="departments__title-middle">Auto</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Tires</li>
+            <li class="departments__item-category hidde">Cribs</li>
+            <li class="departments__item-category hidde">Batteries</li>
+            <li class="departments__item-category hidde">Engine oil</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
+          <svg class="departments__list-chevron">
+            <use href="images/sprite.svg#chevronDown"></use>
+          </svg>
+          <h3 class="departments__title-middle">Tourism</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Backpacks</li>
+            <li class="departments__item-category hidde">Tents</li>
+            <li class="departments__item-category hidde">Thermos</li>
+            <li class="departments__item-category hidde">Suitcases</li>
+          </ul>
+        </section>
+      </li>
+    </ul>
+  </section>
+</aside>
+    <section class="board-sales">
+  <h2 class="visually-hidden">Select a product</h2>
+  <div class="board-sales__wrapper">
+    <div class="board-sales__filters">
+      <div class="board-sales__selects">
+        <ul class="board-sales__select">
+          <li class="board-sales__filter-item" data-value="notChosen">Utility</li>
+          <li class="board-sales__filter-item hidde" data-value="useless">Useless First</li>
+          <li class="board-sales__filter-item hidde" data-value="useful">Useful</li>
+        </ul>
+        <ul class="board-sales__select">
+          <li class="board-sales__filter-item" data-value="notChosen">Condition</li>
+          <li class="board-sales__filter-item hidde" data-value="notUsed">Not used</li>
+          <li class="board-sales__filter-item hidde" data-value="secondhand">Secondhand</li>
+        </ul>
+        <ul class="board-sales__select">
+          <li class="board-sales__filter-item" data-value="notChosen">Delivery options</li>
+          <li class="board-sales__filter-item hidde" data-value="pickup">Pickup</li>
+          <li class="board-sales__filter-item hidde" data-value="freeShipping">free shipping</li>
+          <li class="board-sales__filter-item hidde" data-value="fastDelivery">fast delivery</li>
+        </ul>
+      </div>
+      <div class="board-sales__show-filter">
+        <button class="board-sales__btn-showFl">Show all</button>
+        <button class="board-sales__btn-showFl board-sales__btn-showFl_activ">Auction</button>
+        <button class="board-sales__btn-showFl">Buy now</button>
+      </div>
+      <div class="board-sales__preview-type">
+        <button class="board-sales__btn-changePw" id="btnPrewiewList">
+          <svg class="board-sales__svg">
+            <use xlink:href="images/sprite.svg#viewList"/>
+          </svg>
+        </button>
+        <button class="board-sales__btn-changePw board-sales__btn-changePw_activ" id="btnPrewiewGrid">
+          <svg class="board-sales__svg board-sales__svg_activ">
+            <use xlink:href="images/sprite.svg#viewGrid"/>
+          </svg>
+        </button>
+      </div>
+      <div class="board-sales__related">
+        <h2 class="board-sales__title">Related</h2>
+        <ul class="board-sales__related-items">
+          <li class="board-sales__related-item"><a href="#" class="board-sales__related-link">under $50</a></li>
+          <li class="board-sales__related-item"><a href="#" class="board-sales__related-link">kitten</a></li>
+          <li class="board-sales__related-item"><a href="#" class="board-sales__related-link">worldwide shipping</a></li>
+          <li class="board-sales__related-item"><a href="#" class="board-sales__related-link">plastic plugs</a></li>
+          <li class="board-sales__related-item"><a href="#" class="board-sales__related-link">pucker shoes</a></li>
+          <li class="board-sales__related-item"><a href="#" class="board-sales__related-link">vintage typewriter</a></li>
+        </ul>
+        <button class="board-sales__btn-related-more">
+          <svg class="board-sales__btn-related-svg">
+            <use href='images/sprite.svg#plus'></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="board-sales__products products"></div>
+  </div>
+  <button class="products__btn-show-more">Show more</button>
+</section>
+  </main>
+  <footer class="footer">
+  <div class="footer__wrapper">
+    <h2 class="footer__title footer__about-us">About us:</h2>
+    <ul class="footer__items-about">
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Delivery Service</a></li>
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Lookbook</a></li>
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Privacy Policy</a></li>
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Careers</a></li>
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Gift Cards</a></li>
+    </ul>
+    <div class="footer__contacts">
+      <h2 class="footer__title footer__contacts-title">Contacts:</h2>
+      <p class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit amet deserunt officiis id, pariatur tenetur iusto adipisci error? Minus, quae?</p>
+      <a href="pageNotFound.html" class="footer__link">Comilla, Bangladesh 3500</a>
+      <a href="mailto:test@mail.com" class="footer__link">kawsarahmed0210@gmail.com</a>
+      <a href="tel:+01647470457" class="footer__link">+7(800) 355-35-35</a>
+      <h3 class="footer__subtitle">We are in social networks:</h3>
+      <ul class="footer__socialLinks">
+        <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
+        <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
+        <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
+        <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
+      </ul>
+    </div>
+    <small class="footer__small">Copyright © 2020 . Your companyname All rights reserved</small>
+  </div>
+</footer>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product name</title>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="appbar">
+  <a href="./index.html" class="appbar__logo"></a>
+  <a href="./pageNotFound.html" class="appbar__link">Sell on Shopka</a>
+  <a href="./pageNotFound.html" class="appbar__link">Register</a>
+  <form class="appbar__search">
+    <input type="search" class="appbar__input" placeholder="Search">
+    <input type="submit" class="appbar__btn-search" value="">
+  </form>
+  <a href="./pageNotFound.html" class="appbar__link">Consumer Electronics</a>
+  <div class="appbar__account account">
+    <div class="account__btn" id="sing-in">Sign in</div>
+    <div class="account__btn" id="cart">My cart
+      <span id="count-product">1+</span>
+    </div>
+    <div class="account__menu" id="login"></div>
+  </div>
+  <div class="appbar_modals modals">
+    <div class="modals__login hidde">
+      <form class="modals__login-form">
+        <span class="modals__login-text">Login:</span>
+        <input type="email" class="modals__login-input" aria-label="Login">
+        <span class="modals__login-text">Password:</span>
+        <input type="password" class="modals__login-input" aria-label="Password">
+        <button type="submit" class="modals__login-btn">Enter</button>
+        <button class="modals__login-btn">Restore password</button>
+        <button class="modals__login-btn modals__login-close-btn">X</button>
+      </form>
+    </div>
+    <div class="modals__cart hidde">
+      <div class="modals__wrap-cart"></div>
+    </div>
+    <div class="modals__login-menu hidde">
+      <ul class="modals__login-menu-list">
+        <li class="modals__login-menu-item">John Doe</li>
+        <li class="modals__login-menu-item">My watch</li>
+        <li class="modals__login-menu-item">Register</li>
+        <li class="modals__login-menu-item">Sell on Shopka</li>
+        <li class="modals__login-menu-item">Consumer Electronics</li>
+        <li class="modals__login-menu-item">Settings</li>
+      </ul>
+    </div>
+  </div>
+</header>
+  <main class="product">
+    <section class="product__wrapper"></section>
+    <section class="product__similar">
+      <h2 class="product__similar-title">Similar products:</h2>
+      <div class="products product__similar-wrap">
+        <div class="products__card">
+          <img src="./images/cards/tubes.webp" alt="tubes" class="products__illust">
+          <a href="./product.html" class="products__link">Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</a>
+          <span class="products__cost">$13.95</span>
+          <span class="products__additional">Wordwide shitting available Buyers protection possible!</span>
+          <div class="products__rating rating">
+            <div class="rating__star" data-value="1"></div>
+            <div class="rating__star" data-value="2"></div>
+            <div class="rating__star" data-value="3"></div>
+            <div class="rating__star" data-value="4"></div>
+            <div class="rating__star" data-value="5"></div>
+            <span class="rating__value">4.85</span>
+          </div>
+          <button class="products__watch products__btn"> 
+            <svg class="products__btn-svg">
+              <use xlink:href="../images/sprite.svg#heard"/>
+            </svg>
+            Watch
+          </button>
+          <button class="products__to-cart products__btn"> 
+            <svg class="products__btn-svg">
+              <use xlink:href="../images/sprite.svg#cart"/>
+            </svg>
+            To cart
+          </button>
+        </div>
+        <div class="products__card">
+          <img src="./images/cards/tubes.webp" alt="tubes" class="products__illust">
+          <a href="./product.html" class="products__link">Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</a>
+          <span class="products__cost">$13.95</span>
+          <span class="products__additional">Wordwide shitting available Buyers protection possible!</span>
+          <div class="products__rating rating">
+            <div class="rating__star" data-value="1"></div>
+            <div class="rating__star" data-value="2"></div>
+            <div class="rating__star" data-value="3"></div>
+            <div class="rating__star" data-value="4"></div>
+            <div class="rating__star" data-value="5"></div>
+            <span class="rating__value">4.85</span>
+          </div>
+          <button class="products__watch products__btn"> 
+            <svg class="products__btn-svg">
+              <use xlink:href="../images/sprite.svg#heard"/>
+            </svg>
+            Watch
+          </button>
+          <button class="products__to-cart products__btn"> 
+            <svg class="products__btn-svg">
+              <use xlink:href="../images/sprite.svg#cart"/>
+            </svg>
+            To cart
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="product__comments">
+      <h2 class="product__comment-title">Comments:</h2>
+      <div class="product__comments-items">
+        <div class="product__comment-item">
+          <img src="./images/userPic.webp" alt="use name photo" class="product__user-pic">
+          <span class="product__author" rel="author">John</span>
+          <div class="product__comment-rating">
+            <img src="images/cards/star.svg" alt="star" class="product__star">
+            <span class="product__rating-value">5</span>
+          </div>
+          <p class="product__comment-text">Sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, unde? Corrupti, unde!</p>
+        </div>
+        <div class="product__comment-item">
+          <img src="./images/userPic.webp" alt="use name photo" class="product__user-pic">
+          <span class="product__author" rel="author">John</span>
+          <div class="product__comment-rating">
+            <img src="images/cards/star.svg" alt="star" class="product__star">
+            <span class="product__rating-value">3</span>
+          </div>
+          <p class="product__comment-text">Lorem ipsum dolor, sit amet consectetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit non perspiciatis facilis. Voluptatum, voluptates nobis!</p>
+        </div>
+        <div class="product__comment-item">
+          <img src="./images/userPic.webp" alt="use name photo" class="product__user-pic">
+          <span class="product__author" rel="author">John</span>
+          <div class="product__comment-rating">
+            <img src="images/cards/star.svg" alt="star" class="product__star">
+            <span class="product__rating-value">4</span>
+          </div>
+          <p class="product__comment-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, unde! Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="product__comment-item">
+          <img src="./images/userPic.webp" alt="use name photo" class="product__user-pic">
+          <span class="product__author" rel="author">John</span>
+          <div class="product__comment-rating">
+            <img src="images/cards/star.svg" alt="star" class="product__star">
+            <span class="product__rating-value">4</span>
+          </div>
+          <p class="product__comment-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, unde! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, odit.</p>
+        </div>
+        <div class="product__comment-item">
+          <img src="./images/userPic.webp" alt="use name photo" class="product__user-pic">
+          <span class="product__author" rel="author">John</span>
+          <div class="product__comment-rating">
+            <img src="images/cards/star.svg" alt="star" class="product__star">
+            <span class="product__rating-value">4</span>
+          </div>
+          <p class="product__comment-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, unde! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, odit.</p>
+        </div>
+        <div class="product__comment-item">
+          <img src="./images/userPic.webp" alt="use name photo" class="product__user-pic">
+          <span class="product__author" rel="author">John</span>
+          <div class="product__comment-rating">
+            <img src="images/cards/star.svg" alt="star" class="product__star">
+            <span class="product__rating-value">4</span>
+          </div>
+          <p class="product__comment-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, unde! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, odit.</p>
+        </div>
+        <div class="product__comment-item">
+          <img src="./images/userPic.webp" alt="use name photo" class="product__user-pic">
+          <span class="product__author" rel="author">John</span>
+          <div class="product__comment-rating">
+            <img src="images/cards/star.svg" alt="star" class="product__star">
+            <span class="product__rating-value">4</span>
+          </div>
+          <p class="product__comment-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, unde! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, odit.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+  <div class="footer__wrapper">
+    <h2 class="footer__title footer__about-us">About us:</h2>
+    <ul class="footer__items-about">
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Delivery Service</a></li>
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Lookbook</a></li>
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Privacy Policy</a></li>
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Careers</a></li>
+      <li class="footer__item-about"><a href="pageNotFound.html" class="footer__link">Gift Cards</a></li>
+    </ul>
+    <div class="footer__contacts">
+      <h2 class="footer__title footer__contacts-title">Contacts:</h2>
+      <p class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit amet deserunt officiis id, pariatur tenetur iusto adipisci error? Minus, quae?</p>
+      <a href="pageNotFound.html" class="footer__link">Comilla, Bangladesh 3500</a>
+      <a href="mailto:test@mail.com" class="footer__link">kawsarahmed0210@gmail.com</a>
+      <a href="tel:+01647470457" class="footer__link">+7(800) 355-35-35</a>
+      <h3 class="footer__subtitle">We are in social networks:</h3>
+      <ul class="footer__socialLinks">
+        <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
+        <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
+        <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
+        <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
+      </ul>
+    </div>
+    <small class="footer__small">Copyright © 2020 . Your companyname All rights reserved</small>
+  </div>
+</footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

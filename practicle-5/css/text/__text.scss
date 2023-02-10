@@ -1,0 +1,47 @@
+.text {
+  &__title {
+    font-size: calc(24px + (12 + 12 * 0.7) * ((100vw - 320px) / 1600)); // 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #2d3f51;
+  }
+  &__title_white {
+    color: #ffffff;
+  }
+  &__h3 {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2d3f51;
+  }
+  &__h3_white {
+    color: #ffffff;
+  }
+  &__paragraph {
+    height: 100px;
+    overflow: hidden;
+    padding-top: 40px;
+    width: 90%;
+    max-width: 720px;
+  }
+  &__paragraph-p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #959ea7;
+  }
+  &__paragraph-p_white {
+    color: #959ea7;
+  }
+  &__author {
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #c8342d;
+  }
+  &__btn-read-more:hover {
+    color: #c8342d;
+  }
+}

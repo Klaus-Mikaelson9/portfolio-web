@@ -1,0 +1,14 @@
+.title {
+    font-family: RedVelvet;
+    font-size: calc(28px + (39 + 39 * 0.7) * ((100vw - 320px) / 1366)); // 67px;
+    line-height: calc(46px + (69 + 69 * 0.7) * ((100vw - 320px) / 1366)); //115px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    &_black {
+        color: #000000;
+    }
+    &_underline {
+        border-bottom: 1px solid;
+    }
+}

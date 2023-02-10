@@ -1,0 +1,26 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10vh;
+  margin-top: auto;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__btn {
+    border: none;
+    box-shadow: none;
+    padding: 5px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .5);;
+  }
+  &__btn:not(:last-child) {
+    margin-right: 15px;
+  }
+  &__btn:hover {
+    background-color: #ffffff;
+  }
+}

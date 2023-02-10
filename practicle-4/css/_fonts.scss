@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Brushwell; /* имя шрифта для CSS правил */
+    src: local("Brushwell"), /* проверяем наличие шрифта в ОС пользователя */
+     url("../Fonts/brushwell/Brushwell.otf") format('opentype'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+@font-face {
+    font-family: RedVelvet; /* имя шрифта для CSS правил */
+    src: local("RedVelvet"), /* проверяем наличие шрифта в ОС пользователя */
+     url("../Fonts/RedVelvet/red-velvet-regular.otf") format('opentype'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+@font-face {
+    font-family: LouisGeorgeCafe; /* имя шрифта для CSS правил */
+    src: local("LouisGeorgeCafe"), /* проверяем наличие шрифта в ОС пользователя */
+     url("../Fonts/LouisGeorgeCafe/LouisGeorgeCafe.ttf") format('truetype'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+@font-face {
+    font-family: NEXTART; /* имя шрифта для CSS правил */
+    src: local("NEXTART"), /* проверяем наличие шрифта в ОС пользователя */
+     url("../Fonts/nextart/nextart.ttf") format('truetype'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}

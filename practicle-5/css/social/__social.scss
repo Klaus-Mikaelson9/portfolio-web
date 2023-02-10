@@ -1,0 +1,39 @@
+.social {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+  &__li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  &__links:hover &__icon {
+    fill: #c8342d;
+  }
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: #ffffff;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .social {
+    display: none;
+  }
+}

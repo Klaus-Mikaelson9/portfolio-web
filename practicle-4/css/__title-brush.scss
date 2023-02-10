@@ -1,0 +1,10 @@
+.title-brush{
+    font-family: Brushwell;
+    font-size: calc(57px + (19 + 19 * 0.7) * ((100vw - 320px) / 1366)); // 76px;
+    line-height: calc(38px + (10 + 10 * 0.7) * ((100vw - 320px) / 1366)); // 48px;
+    font-weight: 400;
+    color: #ffffff;
+    &_black {
+        color: #000000;
+    }
+}

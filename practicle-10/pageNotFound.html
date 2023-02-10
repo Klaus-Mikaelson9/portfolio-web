@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found</title>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="appbar">
+  <a href="./index.html" class="appbar__logo"></a>
+  <a href="./pageNotFound.html" class="appbar__link">Sell on Shopka</a>
+  <a href="./pageNotFound.html" class="appbar__link">Register</a>
+  <form class="appbar__search">
+    <input type="search" class="appbar__input" placeholder="Search">
+    <input type="submit" class="appbar__btn-search" value="">
+  </form>
+  <a href="./pageNotFound.html" class="appbar__link">Consumer Electronics</a>
+  <div class="appbar__account account">
+    <div class="account__btn" id="sing-in">Sign in</div>
+    <div class="account__btn" id="cart">My cart
+      <span id="count-product">1+</span>
+    </div>
+    <div class="account__menu" id="login"></div>
+  </div>
+  <div class="appbar_modals modals">
+    <div class="modals__login hidde">
+      <form class="modals__login-form">
+        <span class="modals__login-text">Login:</span>
+        <input type="email" class="modals__login-input" aria-label="Login">
+        <span class="modals__login-text">Password:</span>
+        <input type="password" class="modals__login-input" aria-label="Password">
+        <button type="submit" class="modals__login-btn">Enter</button>
+        <button class="modals__login-btn">Restore password</button>
+        <button class="modals__login-btn modals__login-close-btn">X</button>
+      </form>
+    </div>
+    <div class="modals__cart hidde">
+      <div class="modals__wrap-cart"></div>
+    </div>
+    <div class="modals__login-menu hidde">
+      <ul class="modals__login-menu-list">
+        <li class="modals__login-menu-item">John Doe</li>
+        <li class="modals__login-menu-item">My watch</li>
+        <li class="modals__login-menu-item">Register</li>
+        <li class="modals__login-menu-item">Sell on Shopka</li>
+        <li class="modals__login-menu-item">Consumer Electronics</li>
+        <li class="modals__login-menu-item">Settings</li>
+      </ul>
+    </div>
+  </div>
+</header>
+  <main class="not-page">
+    <h1 class="not-page__title">404</h1>
+    <p class="not-page__text">Page not found. <br> Most likely it hasn't been created yet.</p>
+  </main>
+</body>
+</html>

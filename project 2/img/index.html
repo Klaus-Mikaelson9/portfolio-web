@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .area {
+            height: 600px;
+            background-color: #eee;
+            position: relative;
+        }
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            cursor: pointer;
+            color: #fff;
+            font-size: 30px;
+        }
+        .btn {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            user-select: none;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="area"></div>
+    <a class="btn">+</a>
+    
+    
+<script>
+
+    const $btn = document.querySelector('.btn');
+    const $area = document.querySelector('.area');
+
+    let action = false;
+
+    let boxes = [];
+
+    if (localStorage.getItem('coords')) {
+        boxes = JSON.parse(localStorage.getItem('coords'));
+        boxGenerator(boxes);
+    }
+
+    let $selectedBox = null;
+    let selectedBoxIndex = 0;
+
+    let startCoords = {
+        x: 0,
+        y: 0
+    }
+    let currentCoords = {
+        x: 0,
+        y: 0
+    }
+    let distance = {
+        x: 0,
+        y: 0
+    }
+
+    function boxGenerator(list) {
+        let template = '';
+        for (let i = 0; i < list.length; i++) {
+            template += '<div class="box" style="left: ' + list[i].x + 'px; top: ' + list[i].y + 'px;" data-index="' + i + '">' + 
+                            '<textarea class="field" data-index="' + i + '">' + list[i].note + '</textarea>' +
+                        '</div>'
+        }
+        $area.innerHTML = template;
+        document.querySelectorAll('.box .field').forEach(function (el) {
+            el.addEventListener('input', function (e) {
+                let targetText = e.target.value;
+                let fieldIndex = e.target.getAttribute('data-index');
+                boxes[fieldIndex].note = targetText;
+                localStorage.setItem('coords', JSON.stringify(boxes));
+            });
+        });
+    }
+    function move(coords) {
+        $selectedBox.style.left = coords.x + 'px';
+        $selectedBox.style.top = coords.y + 'px';
+    }
+
+    $area.addEventListener('mousedown', function (e) {
+        if (e.target.classList.contains('box')) {
+            $selectedBox = e.target;
+            selectedBoxIndex = e.target.getAttribute('data-index');
+            action = true;
+            startCoords.x = e.pageX;
+            startCoords.y = e.pageY;
+        }
+    });
+    $area.addEventListener('mouseup', function (e) {
+        if (action) {
+            action = false;
+            boxes[selectedBoxIndex].x = distance.x;
+            boxes[selectedBoxIndex].y = distance.y;
+            localStorage.setItem('coords', JSON.stringify(boxes));
+        }
+    });
+    $area.addEventListener('mousemove', function (e) {
+        if (action) {
+            currentCoords.x = e.pageX;
+            currentCoords.y = e.pageY;
+
+            distance.x = boxes[selectedBoxIndex].x + (currentCoords.x - startCoords.x);
+            distance.y = boxes[selectedBoxIndex].y + (currentCoords.y - startCoords.y);
+
+            move(distance);
+        }
+    });
+    $btn.addEventListener('click', function () {
+        boxes.push({
+            x: 0,
+            y: 0,
+            note: ''
+        });
+        boxGenerator(boxes);
+    });
+
+</script>
+</body>
+</html>

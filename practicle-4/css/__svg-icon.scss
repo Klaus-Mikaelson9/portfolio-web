@@ -1,0 +1,8 @@
+.svg-icon {
+    width: 30px;
+    height: 30px;
+    fill: rgba($color: #fff, $alpha: .5);
+    &:hover {
+        fill: rgba($color: #fff, $alpha: 1);
+    }
+}
